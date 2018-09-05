@@ -1,0 +1,15 @@
+watchers:
+  - name: Codebase Files
+    paths: ["/home/leo/development/projects/panicroom/*"]
+    alerters: ["codelog","sns_test"]
+
+alerters:
+  - name: codelog
+    type: log
+    config:
+      path: STDOUT
+  - name: sns_test
+    type: sns
+    config:
+      region: eu-west-1
+      arn: arn:aws:sns:eu-west-1:205331266135:panicroom-test

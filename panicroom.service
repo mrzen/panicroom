@@ -1,0 +1,15 @@
+[Unit]
+Description = PanicRoom - File alert monitor
+After=network-online.target
+
+[Service]
+Type = simple
+# PanicRoom should run as root in order to ensure it can watch files.
+Group = root
+User = root
+LimitNOFILE=65535
+ExecStart=/usr/local/bin/panicroom --config-path /etc/panicroom.yml
+Nice=-4
+
+[Install]
+WantedBy=multi-user.target
