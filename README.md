@@ -76,5 +76,5 @@ Known Limitations
 Planned Features
 ----------------
 
-[ ] Watch directories for new files and add matching files to watcher lists and handle their notifications
+[ ] Watch directories for new files and add matching files to watcher lists and handle their notifications.
 [ ] SNS Alerter: Group alerts together and push a single notification of all events after a short hysteresis (5s)
